@@ -1,0 +1,9 @@
+baseurl = "http://Stratosphere.cat/"
+title = "Stratosphere"
+author = "li-fstz"
+paginate = 3
+theme = "arabica"
+
+[params]
+    description = "Welcome, my cat!"
+    replaceGoogleFonts = "fonts.loli.net"
