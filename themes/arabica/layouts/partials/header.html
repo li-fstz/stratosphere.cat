@@ -10,6 +10,7 @@
 			</a>
 		</h1>
 		<h2 class="blog-description">{{ .Site.Params.description }}</h2>
+		<h2 id="hitokoto" class="blog-description"><span v-text="data"></span></h2>
 	</div>
 
 	<div class="nav">
@@ -18,4 +19,16 @@
       <a class="nav- {{ if $currentPage.IsMenuCurrent "main" . }}nav-current{{ end }}" role="presentation" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
 		{{ end }}
 	</div>
+	<script>
+	axios.get("https://v1.hitokoto.cn/")
+		.then(function (response) {
+		var hitokoto = new Vue({
+			el: '#hitokoto',
+			data: {
+			'data': ''
+			}
+		});
+		hitokoto.data = response.data.hitokoto + ' —— ' + response.data.from;
+		});
+	</script>
 </header>
