@@ -1,6 +1,7 @@
 ---
 title: "Haskell GHCi 的使用"
 date: 2018-10-05T00:06:33+08:00
+draft: true
 ---
 
 &emsp;&emsp;为了配合教材，我选用了 [7.8.4 的 GHCi](https://www.haskell.org/ghc/download_ghc_7_8_4.html#windows64) ，下载直接添加 `ghc-7.8.4\bin` 到系统的 path 环境变量就可以使用了。
